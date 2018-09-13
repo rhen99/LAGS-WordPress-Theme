@@ -28,7 +28,6 @@ h1 {
 nav {
 	position: relative;
 	display: block;
-	margin-bottom: 4rem;
 	padding-bottom: .8rem;
 	background: #ccc;
 	overflow: hidden;
@@ -143,8 +142,66 @@ nav ul li a:hover {
 	margin: 5px 5px;
 	transition: background-color .3s;
 }
+/* Showcase */
+
+.showcase {
+	text-align: center;
+	height: 100vh;
+	background-image: url(img/default.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.showcase-overlay {
+	z-index: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.582);
+}
+.showcase-inside {
+	z-index: 1;
+	display: inline-block;
+	margin-top: 100px;
+	z-index: 1;
+}
+.showcase-inside h1 {
+	font-size: 3rem;
+	margin-bottom: .3rem;
+}
+.showcase-inside p {
+	font-size: 1.7rem;
+	margin-top: 0;
+}
+.showcase-inside .showcase-button a {
+	outline: none;
+	border: #51007a 1px solid;
+	color: #51007a;
+	background: transparent;
+	padding: .7rem;
+	font-weight: 700;
+	transition: .3s;
+	text-decoration: none;
+}
+.showcase-inside .showcase-button a:hover {
+	background: #51007a;
+	color: #fff;
+}
+.social-links a {
+	padding: .3rem;
+	font-size: 1.5rem;
+	transition: .3s;
+}
+.social-links a:hover {
+	color: #51007a;
+}
+.introduction {
+	text-align: center;
+}
+
 /* Containers */
 .container {
+	padding-top: 2rem;
 	display: flex;
 	height: 100%;
 	max-width: 80%;
@@ -261,6 +318,7 @@ nav ul li a:hover {
 }
 .post-thumbnail {
 	width: 100%;
+	padding-top: 1rem;
 }
 .post-thumbnail img {
 	width: 100%;

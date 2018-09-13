@@ -33,3 +33,6 @@ function wpl_widgets_init($id){
     ));
 }
 add_action('widgets_init', 'wpl_widgets_init');
+
+require get_template_directory(). '/inc/customizer.php';
+require get_template_directory(). '/thememod/head.php';
