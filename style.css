@@ -153,17 +153,20 @@ nav ul li a:hover {
 	background-position: center;
 }
 .showcase-overlay {
-	z-index: 0;
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: rgba(0, 0, 0, 0.582);
+	background: #000;
+	opacity: .5;
 }
 .showcase-inside {
+	position: relative;
+	z-index: 2;
+	color: #000;
 	z-index: 1;
+	opacity: 1;
 	display: inline-block;
 	margin-top: 100px;
-	z-index: 1;
 }
 .showcase-inside h1 {
 	font-size: 3rem;

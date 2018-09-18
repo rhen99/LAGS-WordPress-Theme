@@ -18,7 +18,7 @@
 <body>
     <nav class="lagsNav" id="lagsNav">
         <div class="branding">
-            <h3 class="brand"><a href="#">MY SITE</a></h3>
+            <h3 class="brand"><a href="<?php echo home_url(); ?>"><?php echo get_theme_mod('site_title', 'MY SITE'); ?></a></h3>
         </div>
         <div class="hamburger" id="hb">
             <div class="lines"></div>
@@ -33,7 +33,7 @@
         )); ?>
     </nav>
     <div class="showcase">
-        <div class="showcase-overlay">
+        <div class="showcase-overlay"></div>
                 <div class="showcase-inside">
                     <h1 class="showcase-title"><?php echo get_theme_mod( 'showcase_heading', 'Custom Title'); ?></h1>
                     <p class="showcase-secondary-text"><?php echo get_theme_mod('showcase_secondary', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, totam.'); ?></p>
@@ -43,26 +43,31 @@
                     <div class="social-media">
                         <h2>Follow Us</h2>
                         <div class="social-links">
-
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-
-                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <?php if(get_theme_mod('lagstheme_fb_btn')): ?>
+                            <a href="<?php echo get_theme_mod('fb_url', 'https://www.facebook.com/'); ?>"><i class="fab fa-facebook-f"></i></a>
+                           <?php endif; ?>
                             
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                           <?php if(get_theme_mod('lagstheme_twitter_btn')): ?>
+                            <a href="<?php echo get_theme_mod('twitter_url', 'https://www.twitter.com/'); ?>"><i class="fab fa-twitter"></i></a>
+                           <?php endif; ?>
+
+                            <?php if(get_theme_mod('lagstheme_ig_btn')): ?>
+                            <a href="<?php echo get_theme_mod('ig_url', 'https://www.instagram.com/'); ?>"><i class="fab fa-instagram"></i></a>
+                           <?php endif; ?>
+                            
+                           <?php if(get_theme_mod('lagstheme_li_btn')): ?>
+                            <a href="<?php echo get_theme_mod('li_url', 'https://www.linkedin.com/'); ?>"><i class="fab fa-linkedin-in"></i></a>
+                           <?php endif; ?>
+
                         </div>
                     </div>
                 </div>
-        </div>
     </div>
     <main class="container">
         <section class="landing-section">
             <div class="introduction">
-                    <h1>Introduction</h1>
-                    <p class="intro">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora repudiandae voluptates quia delectus rerum numquam corporis. Aut, corporis dolorem laborum ipsam quaerat ex, molestiae labore praesentium deserunt tenetur asperiores repudiandae quo nemo, voluptatibus soluta adipisci magni recusandae quod et illo ratione vitae aperiam esse doloremque? Maiores ut eos omnis eaque!
-                    </p>
+                    <h1><?php echo get_theme_mod('intro_title', 'Introduction'); ?></h1>
+                    <p class="intro"><?php echo get_theme_mod('intro_paragraph', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora repudiandae voluptates quia delectus rerum numquam corporis. Aut, corporis dolorem laborum ipsam quaerat ex, molestiae labore praesentium deserunt tenetur asperiores repudiandae quo nemo, voluptatibus soluta adipisci magni recusandae quod et illo ratione vitae aperiam esse doloremque? Maiores ut eos omnis eaque!'); ?></p>
             </div>
         </section>
     </main>

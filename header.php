@@ -14,7 +14,7 @@
 <body>
     <nav class="lagsNav" id="lagsNav">
         <div class="branding">
-            <h3 class="brand"><a href="#">MY SITE</a></h3>
+            <h3 class="brand"><a href="<?php echo home_url(); ?>"><?php echo get_theme_mod('site_title', 'MY SITE'); ?></a></h3>
         </div>
         <div class="hamburger" id="hb">
             <div class="lines"></div>
